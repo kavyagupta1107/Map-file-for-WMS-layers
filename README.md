@@ -11,15 +11,14 @@ apache-install.bat
 **
 gdal_merge -separate -o outputfilename.tif -co PHOTOMETRIC=MINISBLACK pathtoband2.tif pathtoband3.tif pathtoband4.tif
 **
+EXAMPLE : gdal_merge -separate -o LE07_L1TP_145040_20171101_20171127_01_T1.tif -co PHOTOMETRIC=MINISBLACK C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B2.tif C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B3.tif C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B4.tif
 
 3.)add these stacked images to QGIS and make them false colour composite-RED band=Band 3, Green band=Band 2,Blue band=Band 1(gray)
 3.)go to add wms layer
 4.)in the 'NEW' section provide Name(eg.test) and the following URL:
 
-**
 http://127.0.0.1/cgi-bin/mapserv.exe?map=C:/ms4w/apps/k/test.map&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
-**
 where C:/ms4w/apps/k/test.map is the address to the map file.
 
 5.)Connect
