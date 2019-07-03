@@ -8,10 +8,14 @@ apache-install.bat
 2.) Stack the required bands first using the following command in the OSGeo4W shell
 (cd to the folder where you want to keep all the stacks)
 
+
 **
 gdal_merge -separate -o outputfilename.tif -co PHOTOMETRIC=MINISBLACK pathtoband2.tif pathtoband3.tif pathtoband4.tif
 **
+
+
 EXAMPLE : gdal_merge -separate -o LE07_L1TP_145040_20171101_20171127_01_T1.tif -co PHOTOMETRIC=MINISBLACK C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B2.tif C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B3.tif C:\wmsl\Landsat\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1\LE07_L1TP_145040_20171101_20171127_01_T1_B4.tif
+
 
 3.)add these stacked images to QGIS and make them false colour composite-RED band=Band 3, Green band=Band 2,Blue band=Band 1(gray)
 3.)go to add wms layer
